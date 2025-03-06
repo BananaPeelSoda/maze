@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     //xyz coordination
-    public Vector3 direction; 
+    public Vector3 direction;
+    public Rigidbody playerRb;
 
 
 
@@ -26,7 +27,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * Time.deltaTime * speed);
+        //transform.Translate(direction * Time.deltaTime * speed);
+
+
+
+        playerRb.linearVelocity = direction * speed;
     }
 
 
