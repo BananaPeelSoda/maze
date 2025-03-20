@@ -22,6 +22,11 @@ public class Health : MonoBehaviour
 
             Damage(1);
         }
+        if (other.CompareTag("Fireball"))
+        {
+            Damage(2);
+            Destroy(other.gameObject);
+        }
         if(other.CompareTag("Checkpoint"))
         {
 
